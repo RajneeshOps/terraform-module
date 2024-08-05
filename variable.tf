@@ -83,6 +83,6 @@ variable "public_server_name" {
 
 variable "ec2_key_pair" {
   description = "Default key pair for the EC2 instance"
-  default     = "awskey"
+  default     = "sprint4"
 }
 
