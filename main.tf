@@ -64,7 +64,7 @@ module "publicServer" {
   key_name         = var.ec2_key_pair
   instance_type    = var.instance_type
   public_subnet_id = module.public_subnet.public_subnet_id[count.index]
-  security_group   = [for name in var.public_server_name : name == "Nginx-Bastion" ? module.securityGroup.bastion-sg : module.securityGroup.proxy_server_sg]
+  security_group      = [module.securityGroup.redis-sg]
 }
 
 
